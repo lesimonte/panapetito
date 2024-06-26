@@ -18,12 +18,12 @@ h1{
     text-transform: capitalize;
 }
 
-@media (max-width: 786px;) {
+@media (max-width: 786px;){    
     h1{
        text-align: center;
        font-size: 2.5rem;
        color:#f68712 ;
     }
-
+}
 
 </style>
