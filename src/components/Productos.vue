@@ -6,7 +6,7 @@
                 <img class="foto" :src="`/imagenes/${producto.imagen}`" alt="producto">
                 <div class="informacion">
                     <h3 class="titulo">
-                      {{ producto.nombre }}  
+                      {{ producto.producto }}  
 
                     </h3>
                     <p class="descripcion">
@@ -36,3 +36,47 @@ watchEffect(() =>{
     productos.value = listaProductos.filter((producto) =>producto.categoria=== props.categoria)
 })
 </script>
+
+<style scope>
+ .contenedor{
+    padding: 3rem;
+    margin-bottom: 2rem;
+
+}
+
+.productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+.producto{
+    display: flex;
+    align-items: center;
+}
+.informacion{
+    padding:15px ;
+}
+.titulo{
+    font-size: 1.25rem;
+}
+.descripcion{
+    color: gray;
+    word-wrap: break-word;
+}
+.foto{
+    max-width: calc(100%/4);
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px rgb(76, 76, 76);
+}
+.precio{
+    color: #f9a72b;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+@media(max-width:1024px) and (min-width: 768px){  
+    .productos {  
+        grid-template-columns:repeat(1, 1fr);
+    }
+}   
+</style>
